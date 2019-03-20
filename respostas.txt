@@ -1,0 +1,34 @@
+1 - Sim. Há mundaças na ordem de execução das threads porque  cada Thread será executada de forma independente do programa principal. Com isso não é possível prever a ordem de execução de cada Thread pois a mesma será executada em uma tarefa independente. 
+
+2 - A diferença em relação ao programa anterior é que cada thread recebe um argumento para ser executado.
+Foi necessário alocar espaço de memória para cada argumento porque cada thread é executada de forma independete da thread principal. Se usássemos o mesmo argumento alterado o seu valor threads diferentes iriam executar o mesmo argumento.
+
+3 - O programa hello_args.c aloca espaço de memória para cada struct que será passado como argumento. Entretanto, a idThread não foi acrescentada uma unidade para ser compativel com o número de threads.
+Solução:
+arg->idThread = t + 1;
+Além, disso a ordem das threas é completamente aleátorio e independente da ordem de criação na thread principal.
+
+4 - A principal diferença é que apesar das thread continuarem sua execução de forma independente a thread principal só termina sua execução no final quando todas as outra threads terminarem suas execuções.
+
+
+5 - Os argumentos que deverão ser passados são o idThread, para identificar a thread, o primeiro indice (startIndex), o ultimo indice (endIndex) e um ponteiro para o primeiro endereço da lista de numeros.
+
+
+Conclusoes:
+
+ - Desafios:
+	 - alguns conceitos da linguagem c
+	 - entendimento da biblioteca pthread
+	 - arrays e ponteiros.
+
+- Duvidas:
+	- O que é uma thread ? 
+	- por que sua execução é sempre aleatória ? 
+	- quantas threads um processo pode conter ?
+
+- Conclusoes:
+
+	- thread é uma sequencia de execução
+	- A ordem de execução das threads é aleatória
+	- existem mais threads do que processo.
+
